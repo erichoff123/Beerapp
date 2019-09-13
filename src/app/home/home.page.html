@@ -1,14 +1,29 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Ionic Blank
+      Beer Chooser
     </ion-title>
+        <ion-buttons>
+      <ion-button routerLink="/about" routerDirection="forward">
+        About
+      </ion-button>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <ion-card (click)="giveAnswer()">
+
+    <ion-card-header>
+      <div class="ion-text-center" >
+        What kind of beer to do you want? Tap to find out! 
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img src="assets/beer.gif" [ngClass]="cssClass" alt="Beer Chooser">
+    </ion-card-content>
+
+  </ion-card>
 </ion-content>
